@@ -1,0 +1,10 @@
+services:
+  test:
+    image: busybox
+    init: true
+    command: ["sleep", "infinity"]
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:14-alpine
