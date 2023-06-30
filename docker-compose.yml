@@ -1,6 +1,8 @@
 services:
   test:
-    image: busybox
+    profiles:
+      - test
+    build: .
     init: true
     command: ["sleep", "infinity"]
     depends_on:
